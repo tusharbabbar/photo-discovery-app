@@ -38,7 +38,7 @@ class Pics_url < ActiveRecord::Base
 end
 
 get '/:name/:offset/:limit' do
-	##get_tag_id("#{params[:name]}")	
+	#get_tag_id("#{params[:name]}")	
 	get_pics_urls get_tag_id("#{params[:name]}") ,params[:offset],params[:limit]
 	#Search_Word.get_search_words(Tag.get_tag_id "dogs") 
 end
