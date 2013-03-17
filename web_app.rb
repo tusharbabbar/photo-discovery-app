@@ -5,7 +5,7 @@ require 'json'
 ActiveRecord::Base.establish_connection(
 :adapter => "mysql2",
 :host => 'localhost',
-:user=> 'tushar',
+:user=> 'ubuntu',
 :password => "samael321",
 :database => "pics_app_db",
 )
