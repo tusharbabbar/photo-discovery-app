@@ -66,7 +66,8 @@ IN_MR = 20
 				url = pic["images"]["low_resolution"]["url"]
                                 picUrlString = picUrlString + url + "|" + "instagram" + ","
                         end
-                if counter >= limit then break end
+                	if counter >= limit then break end
+			sleep 1
                 end
 		return picUrlString
 	end
