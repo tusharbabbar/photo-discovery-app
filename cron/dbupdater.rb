@@ -5,7 +5,7 @@ class DbUpdater
 	attr_accessor :dbaccessor , :tags, :search_words, :date
 	
 	def initialize 
-		@dbaccessor = MysqlAccess.new("localhost","tushar","samael321","pics_app_db")
+		@dbaccessor = MysqlAccess.new("localhost","ubuntu","samael321","pics_app_db")
 		@date = DateTime.now.to_s.split("T").first
 	end
 
