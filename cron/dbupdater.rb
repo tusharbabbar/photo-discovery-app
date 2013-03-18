@@ -108,8 +108,10 @@ class DbUpdater
 		self.tags.each do |tag|
 			db_feed = getUrls(tag["t_id"],tag["search_type"])
 			db_feed.each do |url_string|
+				if url_string
 				url,source = url_string.split("|")
 				self.dbaccessor.insert_into("pics_urls","t_id, s_name, pic_url, added_on","#{tag["t_id"]},'#{source}','#{url}',#{self.date}")
+				end
 			end
 		end
 	end
