@@ -2,12 +2,14 @@ require 'open-uri'
 require 'json'
 require 'logger'
 
+path = File.dirname(File.dirname(File.expand_path(__FILE__)))
+
 module Geturls			# The methods defined here will be called to get urls from different API's
 				# to dump those urls into the app_db
 FL_MR = 500
 SM_MR = 100
 FI_MR = 100
-path = File.dirname(File.dirname(File.expand_path(__FILE__)))
+
 Log = Logger.new("#{path}/log/geturl_log.log")
 	
 	def Geturls.fromFlickr (search_word, limit) 		#limit tells how many urls  
@@ -78,14 +80,12 @@ Log = Logger.new("#{path}/log/geturl_log.log")
                                 picUrlString = picUrlString + url + "|" + "instagram" + ","
                         end
                 	if counter >= limit then break end
-                	sleep 1
-		end
+                end
 		rescue => e
 			Log.debug "some error in Insta method at : #{nexturl}\n" 
 		ensure
 			Log.debug "images fetched are #{counter} for #{search_word} from instagram"			
 			return picUrlString
-
 	end
 	
 	def Geturls.fromSmugmug (search_word, limit) 		#limit tells how many urls  

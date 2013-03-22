@@ -27,7 +27,7 @@ end
  	def get_pics_urls(tag_name,tag_id,offset,limit)
                 res = Pics_url.find_all_by_t_id(tag_id , :offset => offset, :limit => limit)
                 pics_array = [] 
-		res.each {|r| hash = {:pic_url => "#{r.pic_url}" , :source => r.s_id } ; pics_array << hash }
+		res.each {|r| hash = {:pic_url => "#{r.pic_url}" , :source => r.s_name } ; pics_array << hash }
                 response= {:tag =>  tag_name,:pics => pics_array}
                 return response         
 	end	
