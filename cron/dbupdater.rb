@@ -83,10 +83,10 @@ class DbUpdater
 			 	urls = ["","","","",""]
 				urls1,urls2 = [],[]
 			  	search_words.each do |search_word|
-			 	       	urls[0]+= Geturls.fromFlickr(search_word["search_word"],1625/divider)
-			 	       	urls[1]+= Geturls.fromInstagram(search_word["search_word"],1625/divider)
-			 	        urls[2]+= Geturls.fromSmugmug(search_word["search_word"],625/divider)
-			 	        urls[3]+= Geturls.fromFive(search_word["search_word"],625/divider)
+			 	       	urls[0]+= Geturls.fromFlickr(search_word["search_word"],1750/divider)
+			 	       	urls[1]+= Geturls.fromInstagram(search_word["search_word"],1750/divider)
+			 	        urls[2]+= Geturls.fromSmugmug(search_word["search_word"],750/divider)
+			 	        urls[3]+= Geturls.fromFive(search_word["search_word"],750/divider)
 			 	end
 			 	urls.each_with_index do |url,i|
 			 	        urls[i] = url.split(",")
