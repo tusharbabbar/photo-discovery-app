@@ -6,4 +6,4 @@ require 'sinatra'
 #)
  
 require '~/photo-discovery-server/web_app'
-run Sinatra.application
+run Sinatra::Application
